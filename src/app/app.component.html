@@ -1,0 +1,33 @@
+<!--Division for GeeksForGeeks heading-->
+
+
+<div  *ngFor = "let book of books" > 
+  <h2>{{book.title}}</h2>
+  <h6> {{book.author}}</h6>
+  <img src= {{book.img}} alt="Italian Trulli"/>
+  <h6>{{book.description}}</h6>
+  <button (click)="deleteBook(book)"> Delete</button>
+</div>
+
+
+<form #dataForm="ngForm" (ngSubmit)="addBook(dataForm.value)">
+ 
+      <input name="title" ngModel placeholder="Title" id="title" type="text" class="input-field" /><br/><br/>
+      <input name="author" ngModel placeholder="Author" id="author" type="text" class="input-field" /><br/><br/>
+      <input name="img" ngModel placeholder="Image link" id="img" type="text" class="input-field" /><br/><br/>
+      <input name="description" ngModel placeholder="description " id="description"  type="text" class="input-field" /><br/><br/>                >
+     <button>Add Data </button>
+  
+</form>
+
+<p>{{a}}</p>
+
+<div  *ngFor = "let emp of employees" > 
+  <h2>Name: {{emp.employee_name}}</h2>
+  <h6> Salary: {{emp.employee_salary}}</h6>
+  <h6>Age: {{emp.employee_age}}</h6>
+</div>
+
+
+
+
